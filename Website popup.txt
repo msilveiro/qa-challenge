@@ -1,0 +1,23 @@
+
+-- Integration test
+Scenario: Insert valid age
+Given I am on the webpage
+When I insert the age "18"
+Then I can enter the store
+
+-- Unit tests FE 
+Scenario: The modal is displayed 
+Scenario: The expected text is displayed on the modal 
+Scenario: The textbox only accepts numerical characters
+Scenario: The button "Verify" is clickable 
+Scenario: The api x is called when the user clicks the button
+
+-- Unit tests BE 
+Scenario: The user age is smaller than 18 
+Then api status code is 200 ok
+Scenario: The user age is higher than 18 
+Then api status code is 403 
+Scneario The user age is abc
+Then api status code is 400 
+
+
